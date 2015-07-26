@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib = reload(matplotlib)
+matplotlib.use('Agg')
 import unittest
 from probfit.util import describe, parse_arg
 

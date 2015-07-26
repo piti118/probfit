@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib = reload(matplotlib)
+matplotlib.use('Agg')
 import unittest 
 import warnings
 from nose.tools import assert_equal

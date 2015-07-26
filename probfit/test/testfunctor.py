@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib = reload(matplotlib)
+matplotlib.use('Agg', warn=False)
 from nose.tools import assert_equal, assert_almost_equal
 import numpy as np
 from probfit import (describe, rename, Convolve, Normalized,

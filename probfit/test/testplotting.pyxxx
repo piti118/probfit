@@ -1,6 +1,10 @@
+import matplotlib
+matplotlib = reload(matplotlib)
+matplotlib.use('Agg', warn=False)
 import os
 from os.path import dirname, join
 import numpy as np
+
 from matplotlib import pyplot as plt
 from matplotlib.testing.decorators import image_comparison
 from matplotlib.testing.compare import compare_images
@@ -27,8 +31,8 @@ class image_comparison:
             pass
 
     def setup(self):
-        from matplotlib import rcParams, rcdefaults, use
-        use('Agg', warn=False)  # use Agg backend for these tests
+        from matplotlib import rcParams, rcdefaults
+        #use('Agg', warn=False)  # use Agg backend for these tests
 
         # These settings *must* be hardcoded for running the comparison
         # tests and are not necessarily the default values as specified in
@@ -43,7 +47,7 @@ class image_comparison:
 
     def test(self):
         # compare_images
-        x = compare_images(self.baselineimage, self.actualimage, 0.001)
+        x = compare_images(self.baselineimage, self.actualimage, 1.0)
         if x is not None:
             print x
             assert x is None
