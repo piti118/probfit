@@ -1,7 +1,5 @@
 import matplotlib
-matplotlib = reload(matplotlib)
-matplotlib.use('Agg')
-
+matplotlib.use('Agg', warn=False)
 from nose.tools import assert_equal
 import numpy as np
 from probfit.nputil import mid

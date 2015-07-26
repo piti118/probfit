@@ -1,6 +1,5 @@
 import matplotlib
-matplotlib = reload(matplotlib)
-matplotlib.use('Agg')
+matplotlib.use('Agg', warn=False)
 import os
 from os.path import dirname, join
 import numpy as np

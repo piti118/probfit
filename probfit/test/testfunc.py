@@ -1,6 +1,5 @@
 import matplotlib
-matplotlib = reload(matplotlib)
-matplotlib.use('Agg')
+matplotlib.use('Agg', warn=False)
 from math import log
 import numpy as np
 from nose.tools import assert_equal, assert_almost_equal

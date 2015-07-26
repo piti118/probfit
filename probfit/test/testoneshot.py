@@ -1,6 +1,5 @@
 import matplotlib
-matplotlib = reload(matplotlib)
-matplotlib.use('Agg')
+matplotlib.use('Agg', warn=False)
 import unittest
 import warnings
 from math import sqrt

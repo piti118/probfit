@@ -42,6 +42,10 @@ __all__ = [
     'ugaussian',
     '__version__'
     ]
+import os
+if os.environ.get('NODISPLAY'): #early use agg in case of testing
+    import matplotlib as mpl
+    mpl.use('Agg')
 
 from .costfunc import UnbinnedLH, BinnedLH, Chi2Regression, BinnedChi2,\
                       SimultaneousFit
