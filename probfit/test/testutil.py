@@ -3,6 +3,7 @@ matplotlib.use('Agg', warn=False)
 import unittest
 from probfit.util import describe, parse_arg
 
+
 class Func_Code:
     def __init__(self, varname):
         self.co_varnames = varname
